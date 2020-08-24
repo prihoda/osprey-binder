@@ -34,5 +34,5 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 USER ${USER}
 
-COPY index.ipynb index.ipynb
-
+COPY index.ipynb .
+COPY 1cc8.pdb .
