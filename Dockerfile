@@ -2,6 +2,9 @@ FROM python:3.7
 
 ARG OSPREY_VERSION=3.2
 
+# install OpenJDK java
+RUN apt-get update && apt-get install openjdk-8-jdk
+
 # install pip and python packages
 RUN pip install --no-cache --upgrade pip \
     && pip install --no-cache notebook pandas matplotlib nglview \
