@@ -14,7 +14,7 @@ RUN pip install --no-cache --upgrade pip \
 WORKDIR /tmp
 RUN wget -O osprey.zip https://github.com/donaldlab/OSPREY3/releases/download/3.2.101/osprey-linux-python3-${OSPREY_VERSION}.zip \
     && unzip osprey.zip \
-    && pip install osprey-linux-python3-${OSPREY_VERSION}/wheelhouse/*.whl \
+    && pip install --pre osprey-linux-python3-${OSPREY_VERSION}/wheelhouse/*.whl \
     && rm -r osprey-linux*
     
 # create user with a home directory
