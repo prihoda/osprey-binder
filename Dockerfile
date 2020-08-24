@@ -4,6 +4,7 @@ ARG OSPREY_VERSION=3.2
 
 # install OpenJDK java
 RUN apt-get update && apt-get install -y openjdk-11-jdk
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
 
 # install pip and python packages
 RUN pip install --no-cache --upgrade pip \
