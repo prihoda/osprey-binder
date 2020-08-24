@@ -5,10 +5,7 @@ ARG OSPREY_VERSION=3.2
 # install pip and python packages
 RUN pip install --no-cache --upgrade pip \
     && pip install --no-cache notebook pandas matplotlib nglview \
-    && jupyter labextension install @jupyter-widgets/jupyterlab-manager \
-    && jupyter labextension install nglview-js-widgets \
-    && jupyter nbextension enable --py --sys-prefix widgetsnbextension \
-    && jupyter nbextension enable --py --sys-prefix nglview
+    && jupyter-nbextension enable nglview --py --sys-prefix
 
 # install osprey
 WORKDIR /tmp
