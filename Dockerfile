@@ -35,4 +35,4 @@ WORKDIR ${HOME}
 USER ${USER}
 
 COPY index.ipynb .
-COPY 1cc8.pdb .
+COPY 1CC8.ss.pdb .
