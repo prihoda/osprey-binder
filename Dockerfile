@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM python:3.7
 
 ARG OSPREY_VERSION=3.2
 
@@ -9,7 +9,7 @@ RUN pip install --no-cache --upgrade pip \
 
 # install osprey
 WORKDIR /tmp
-RUN curl -o osprey.zip https://github.com/donaldlab/OSPREY3/releases/download/3.2.101/osprey-linux-python3-${OSPREY_VERSION}.zip \
+RUN wget -O osprey.zip https://github.com/donaldlab/OSPREY3/releases/download/3.2.101/osprey-linux-python3-${OSPREY_VERSION}.zip \
     && unzip osprey.zip \
     && pip install osprey-linux-python3-${OSPREY_VERSION}/wheelhouse/*.whl \
     && rm -r osprey-linux*
